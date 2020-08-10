@@ -2,6 +2,7 @@ body{
 	background:black;
 	color:whitesmoke;
 	font-family:montserrat, sans-serif;
+	margin:0px;
 }
 
 a{
@@ -10,9 +11,6 @@ a{
 }
 
 #topnav{
-	
-	/*float:right;
-	display:none;*/
 	position:absolute;
 	top:0;
 	right:0;
@@ -21,14 +19,8 @@ a{
 	display:flex;
 	justify-content:flex-end;
 	text-align:right;
+	
 }
-/*#topnav a:last-child{
-	position:fixed;
-	top:40px;
-	right:20px;
-}*/
-
-
 #topnav a{
 	font-size:14px;
 	padding:10px 5px;
@@ -40,26 +32,27 @@ a{
 	color:rebeccapurple;
 }
 
-
 section{
 	width:80%;
 	height:100vh;
 	display:flex;
 	flex-direction:column;
 	justify-content:flex-start;
-	padding:10%;
-	position:relative;
+	position: relative;
+	margin:auto auto 10%;
 }
 
-
+#intro-section{
+	justify-content:center;
+}
 #intro-section:before{
 	content:"";
 	position:absolute;
 	width:50%;
 	height:2px;
 	background:white;
-	top:90vh;
-	right:0;
+	top:95%;
+	left:60%;
 }
 
 #intro-section:after{
@@ -68,12 +61,12 @@ section{
 	width:2px;
 	height:30%;
 	background:white;
-	top:60vh;
-	left:90vw;
+	top:70%;
+	left:100%;
 }
 
 #intro-section h2{
-	margin-top:20vh;
+	
 	margin-bottom:0px;
 	font-size:12px;
 	font-weight:normal;
@@ -91,6 +84,7 @@ section{
 	font-size:10px;
 	position:relative;
 }
+
 #intro-section span:after{
 	content:"";
 	position:absolute;
@@ -164,16 +158,17 @@ button.btn.btn-link.secondary-button{
 	background:rebeccapurple;
 	position:relative;
 	text-align:center;
+	margin:10px auto;
 }
 
 .project-img-container{
-	position:absolute;
-	top:0;
-	left:0;
 	width:320px;
 	height:400px;
 	object-fit:cover;
 	overflow:hidden;
+	position: absolute;
+	top:0;
+	left:0;
 }
 .project-details{
 	position:relative;
