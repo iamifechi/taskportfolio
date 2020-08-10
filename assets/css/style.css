@@ -1,5 +1,5 @@
 body{
-	background:black;
+	background:crimson;
 	color:whitesmoke;
 	font-family:montserrat, sans-serif;
 	margin:0px;
@@ -175,6 +175,7 @@ button.btn.btn-link.secondary-button{
 	top:80%;
 	left:0;
 	width:100%;
+	color:black;
 }
 
 .project-details h3{
