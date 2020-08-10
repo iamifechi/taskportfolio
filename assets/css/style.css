@@ -1,5 +1,5 @@
 body{
-	background:crimson;
+	background:black;
 	color:whitesmoke;
 	font-family:montserrat, sans-serif;
 	margin:0px;
@@ -19,7 +19,7 @@ a{
 	display:flex;
 	justify-content:flex-end;
 	text-align:right;
-	
+	display:none;
 }
 #topnav a{
 	font-size:14px;
@@ -45,6 +45,7 @@ section{
 #intro-section{
 	justify-content:center;
 }
+
 #intro-section:before{
 	content:"";
 	position:absolute;
@@ -152,30 +153,99 @@ button.btn.btn-link.secondary-button{
     color:black;
 }
 
+#projects-container{
+	width:100%;
+	position: relative;
+	display:flex;
+	
+	justify-content: space-evenly;
+}
+
+@media(max-width:600px){
+	#projects-container{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
 .project-card{
 	width:320px;
-	height:400px;
-	background:rebeccapurple;
+	height:370px;
 	position:relative;
 	text-align:center;
-	margin:10px auto;
+	margin:70px 8px;
+	background: black;
+}
+
+.project-card:hover{
+	transform:scale(1.009);
+	transition:transform 0.1s ease;
+}
+
+.project-card:hover:before{
+	content:"";
+	position: absolute;
+	top:-2%;
+	left:-2%;
+	width:20px;
+	height: 20px;
+	border-top:solid 1px white;
+	border-left:solid 1px white;
+}
+
+.project-card:hover:after{
+	content:"";
+	position: absolute;
+	bottom:-17%;
+	right:-3%;
+	width:20px;
+	height: 20px;
+	border-bottom:solid 1px white;
+	border-right:solid 1px white;
+}
+
+a.view-project{
+		position:absolute;
+		left:0;
+		top:0;
+		z-index: 1;
+		color:white;
+		width:100%;
+		padding:15px 0px;
+		text-indent:70%;
+		text-decoration:none;
+		font-size:16px;
+		font-weight:bold;
+		background: rgb(18 18 18);
+		border:solid 1px white;
+		border-bottom: none;
 }
 
 .project-img-container{
-	width:320px;
-	height:400px;
+	width:100%;
+	height: 370px;
 	object-fit:cover;
 	overflow:hidden;
 	position: absolute;
-	top:0;
+	top:35px;
 	left:0;
+	border-right:solid 1px white;
+	border-left: solid 1px white;
+}
+
+.project-img-container img{
+	width:100%;
+	opacity:0.8;
 }
 .project-details{
-	position:relative;
-	top:80%;
+	position:absolute;
+	top:100%;
 	left:0;
 	width:100%;
-	color:black;
+	background: black;
+	border:solid 1px white;
+	border-top: none;
+	
 }
 
 .project-details h3{
@@ -183,8 +253,14 @@ button.btn.btn-link.secondary-button{
 	text-transform:uppercase;
 	padding:20px 0px;
 	margin:0px auto;
+	position: relative;
+	background: rgb(18 18 18);
 }
 
 .project-details span{
+	position: absolute;
+	bottom:2px;
+	right:2px;
 	font-size:8px;
+	font-style: italic;
 }
