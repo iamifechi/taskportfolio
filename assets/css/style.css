@@ -288,6 +288,7 @@ body a {
 
 #main #projects-container .project-card {
   width: 320px;
+  max-width:320px;
   height: 370px;
   position: relative;
   z-index: 0;
@@ -317,6 +318,7 @@ body a {
 
 #main #projects-container .project-card .project-img-container {
   width: 100%;
+  max-width:320px;
   height: 370px;
   -o-object-fit: cover;
      object-fit: cover;
